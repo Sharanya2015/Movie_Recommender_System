@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config["Debug"] = True
 
 matric_factorization_df = pd.read_csv('file2.csv')
-knn_df = pd.read_csv('file2.csv')
+knn_df = pd.read_csv('file1.csv')
 dff = pd.read_csv("images_url.csv", encoding = "ISO-8859-1")
 
 @app.route('/homepage', methods=['GET'])
