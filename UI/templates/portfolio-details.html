@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    
+    img {
+        border-radius: 40%;
+    }
+</style>
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Recommendations</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -50,7 +55,6 @@
 
                 <nav class="nav-menu d-none d-lg-block">
                     <ul>
-                        <li class="active"><a href="/homepage">Home</a></li>
                         <li><a href="/homepage#contact">Recommendations</a></li>
 
                     </ul>
@@ -62,7 +66,7 @@
         <!-- End Header -->
 
         <main id="main">
-            <section id="breadcrumbs" class="breadcrumbs" data-aos="fade-up">
+            <!-- <section id="breadcrumbs" class="breadcrumbs" data-aos="fade-up">
                 <div class="container">
 
                     <div class="d-flex justify-content-between align-items-center">
@@ -70,30 +74,34 @@
                     </div>
 
                 </div>
-            </section>
+            </section> -->
             <!-- End Breadcrumbs -->
 
             <table style="margin-left:200px">
-                <tr>
+                <tr style="padding:10px">
                     <td style="margin-right:200px">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h2>Matrix Factorization</h2>
+                            <div class="section-title">
+                                <h2>Matrix Factorization</h2>
+                            </div>
                         </div>
                     </td>
                     <td>
                         <div class="d-flex justify-content-between align-items-center">
-                            <h2>KNN</h2>
+                            <div class="section-title">
+                                <h2>KNN</h2>
+                            </div>
                         </div>
                     </td>
                 </tr>
-                <tr>
+                <tr style="padding:10px">
                     <td>
                         <table style="margin-right:200px">
-                            <tr>
-                                <td>
+                            <tr style="padding:10px">
+                                <td >
                                     {% for x in matrix_data %}
                                     <tr>
-                                        <td><img src="{{ x }}" class="img-fluid" alt="" style="height:500px;width:350px;"></td>
+                                        <td style="padding:10px"><img src="{{ x }}" class="img-fluid" alt="" style="height:500px;width:350px;" width = "200" height = "300"></td>
                                     </tr>
                                     {% endfor %}
                                 </td>
@@ -103,11 +111,11 @@
                     </td>
                     <td>
                         <table>
-                            <tr>
+                            <tr style="padding:10px">
                                 <td style="margin-right:200px">
                                     {% for x in knn_data %}
                                     <tr>
-                                        <td><img src="{{ x }}" class="img-fluid" alt="" style="height:500px;width:350px;"></td>
+                                        <td style="padding:10px"><img src="{{ x }}" class="img-fluid" alt="" style="height:500px;width:350px;"  width = "200" height = "300"></td>
                                     </tr>
                                     {% endfor %}
                                 </td>
